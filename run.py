@@ -15,7 +15,7 @@ def main():
     )
 
     # Get port from environment or use default
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 5001))
 
     # Start the application
     print(f"Starting Docling PDF Processor on port {port}...")
