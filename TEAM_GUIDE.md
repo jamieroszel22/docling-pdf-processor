@@ -18,7 +18,7 @@ This tool makes it easy to extract text and structure from PDFs for use in RAG (
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/docling-pdf-processor.git
+   git clone https://github.com/jamieroszel22/docling-pdf-processor.git
    cd docling-pdf-processor
    ```
 
@@ -31,16 +31,16 @@ This tool makes it easy to extract text and structure from PDFs for use in RAG (
    ```bash
    python run.py
    ```
-   If port 5000 is in use (common on macOS), specify a different port:
+   The application runs on port 5001 by default. To specify a different port:
    ```bash
-   PORT=5001 python run.py
+   PORT=8080 python run.py
    ```
 
 ### Option 2: Install as Python Package
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/docling-pdf-processor.git
+   git clone https://github.com/jamieroszel22/docling-pdf-processor.git
    cd docling-pdf-processor
    ```
 
@@ -56,7 +56,7 @@ This tool makes it easy to extract text and structure from PDFs for use in RAG (
 
 ## Using the Web Interface
 
-1. Open your browser at http://localhost:5000 (or the port you specified)
+1. Open your browser at http://localhost:5001
 2. Select a model from the dropdown (vision models provide better analysis but are slower)
 3. Upload PDFs individually or in batch
 4. Process the documents
@@ -144,7 +144,7 @@ results = batch_process_pdfs(
 
 ### Common Issues
 
-- **Port in Use**: If port 5000 is already in use, specify a different port using `PORT=5001 python run.py`
+- **Port in Use**: If port 5001 is already in use, specify a different port using `PORT=8080 python run.py`
 - **Missing PyMuPDF**: If you see "ModuleNotFoundError: No module named 'fitz'", run `pip install PyMuPDF`
 - **Ollama Connection Error**: Make sure Ollama is running at http://localhost:11434
 - **Slow Processing**: If vision processing is slow, try a smaller document or disable vision processing
@@ -154,5 +154,5 @@ results = batch_process_pdfs(
 
 If you encounter issues not covered here, please:
 1. Check the logs in the terminal running the application
-2. Review the [GitHub README](https://github.com/yourusername/docling-pdf-processor)
+2. Review the [GitHub README](https://github.com/jamieroszel22/docling-pdf-processor)
 3. Open an issue on GitHub for persistent problems

@@ -14,7 +14,7 @@ setup(
     description="A Flask application for processing PDFs using local Ollama models",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/docling-pdf-processor",
+    url="https://github.com/jamieroszel22/docling-pdf-processor",
     packages=find_packages(),
     include_package_data=True,
     classifiers=[
