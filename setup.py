@@ -13,7 +13,7 @@ default_requirements = [
     "pypdf==3.16.0",
     "python-multipart==0.0.6",
     "tqdm==4.66.1",
-    "PyMuPDF==1.22.3",
+    "docling>=2.25.0",
     "Werkzeug==2.2.3",
     "Jinja2==3.1.2",
     "itsdangerous==2.1.2",
