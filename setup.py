@@ -1,10 +1,32 @@
 from setuptools import setup, find_packages
+import os
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = fh.read().splitlines()
+# Default requirements if file not found
+default_requirements = [
+    "flask==2.2.3",
+    "pdfplumber==0.10.2",
+    "python-dotenv==1.0.0",
+    "requests==2.31.0",
+    "pypdf==3.16.0",
+    "python-multipart==0.0.6",
+    "tqdm==4.66.1",
+    "PyMuPDF==1.22.3",
+    "Werkzeug==2.2.3",
+    "Jinja2==3.1.2",
+    "itsdangerous==2.1.2",
+    "click==8.1.3",
+    "MarkupSafe==2.1.2"
+]
+
+# Try to read requirements from file, fallback to defaults if file doesn't exist
+try:
+    with open("requirements.txt", "r", encoding="utf-8") as fh:
+        requirements = fh.read().splitlines()
+except FileNotFoundError:
+    requirements = default_requirements
 
 setup(
     name="docling-pdf-processor",
